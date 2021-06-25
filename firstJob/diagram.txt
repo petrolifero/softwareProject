@@ -11,7 +11,10 @@ class Subnet {
   String vpc
 }
 class AutoScalingGroup {
-  
+  double healthCheckCPU;
+  double healthCheckMemory;
+  unsigned int maxInstances;
+  unsigned int minInstances;
 }
 
 EC2 "1" *-- "1..*" Volume

@@ -1,0 +1,21 @@
+@startuml
+class EC2 {
+  String ami
+  String instanceId
+}
+class Volume {
+  String volumeId
+}
+class Subnet {
+  String ips
+  String vpc
+}
+class AutoScalingGroup {
+  
+}
+
+EC2 "1" *-- "1..*" Volume
+EC2 "1" *-- "1..*" Subnet
+AutoScalingGroup "1" *-- "*" EC2
+
+@enduml
